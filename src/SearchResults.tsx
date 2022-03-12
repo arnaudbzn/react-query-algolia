@@ -39,11 +39,13 @@ export default function SearchResults({ query = "" }: SearchResultsProps) {
             hits.map((product) => (
               <li key={product.objectID} className="product">
                 <span className="product-name">{product.name}</span>
-                <br />
                 {product.shortDescription && (
-                  <span className="product-description">
-                    {product.shortDescription}
-                  </span>
+                  <>
+                    <br />
+                    <span className="product-description">
+                      {product.shortDescription}
+                    </span>
+                  </>
                 )}
                 <br />
                 <span className="product-price">${product.salePrice}</span>
